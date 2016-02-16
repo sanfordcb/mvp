@@ -1,7 +1,9 @@
-<form name="addSearches" ng-submit="addSearch(newSearch)">
-<input type="text" class="search-input" ng-model="newSearch" placeholder="Add a new resource"/>
+<form name="addSearches">
+<input type="text" class="url-input" ng-model="newSearch" placeholder="Add a new resource"/>
+<input type="text" class="notes-input" ng-model="newNotes" placeholder="Add notes"/>
+<button ng-click="addSearch(newSearch, newNotes)">Add Resource</button>
 <ul>
-  <li ng-repeat="search in searches">{{ search }}</li>
+  <li ng-repeat="search in searches">{{ search.title }} </br> {{ search.notes }}</li>
 </ul>
 </form>
 

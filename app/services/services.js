@@ -22,8 +22,8 @@ angular.module('whereWasI.services', [])
 .factory('Searches', function() {
   var searches = [];
 
-  var addSearch = function(url) {
-    searches.push({title: url});
+  var addSearch = function(url, notes) {
+    searches.push({title: url, notes: notes});
   };
 
   return {
