@@ -1,13 +1,18 @@
 angular.module('whereWasI', [
     'whereWasI.services',
     'whereWasI.projects',
+    'whereWasI.searches',
     'ngRoute'
   ])
 .config(function($routeProvider) {
   $routeProvider
     .when('/projects', {
-      templateUrl: 'app/projects/projects.html',
+      templateUrl: 'projects/projects.html',
       controller: 'ProjectsController'
     })
-    .otherwise({ redirectTo: '/' });
+    .when('/searches', {
+      templateUrl: 'searches/searches.html',
+      controller: 'SearchesController'
+    })
+    .otherwise({ redirectTo: '/' })
 });

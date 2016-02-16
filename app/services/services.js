@@ -1,4 +1,4 @@
-angular.module('whereWasI.services', []);
+angular.module('whereWasI.services', [])
 
 .factory('Projects', function() {
   var projects = [];
@@ -17,4 +17,17 @@ angular.module('whereWasI.services', []);
     addProject: addProject,
     projLink: projLink
   }
-});
+})
+
+.factory('Searches', function() {
+  var resources = [];
+
+  var addResource = function(url) {
+    resources.push(url);
+  };
+
+  return {
+    resources: resources,
+    addResource: addResource
+  }
+})

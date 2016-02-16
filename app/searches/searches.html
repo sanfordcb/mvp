@@ -1,0 +1,6 @@
+<form name="addResource" ng-submit="addResource()">
+<input type="text" class="resource-input" ng-model="newResource" placeholder="Add a new resource"/>
+<ul>
+  <li ng-repeat="resource in resources">{{ resource }}</li>
+</ul>
+</form>
