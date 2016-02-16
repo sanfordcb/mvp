@@ -1,6 +1,15 @@
-<form name="addResource" ng-submit="addResource()">
-<input type="text" class="resource-input" ng-model="newResource" placeholder="Add a new resource"/>
+<form name="addSearches" ng-submit="addSearch(newSearch)">
+<input type="text" class="search-input" ng-model="newSearch" placeholder="Add a new resource"/>
 <ul>
-  <li ng-repeat="resource in resources">{{ resource }}</li>
+  <li ng-repeat="search in searches">{{ search }}</li>
 </ul>
 </form>
+
+<!-- <form name="addProjects" ng-submit="addProject(newProject)">
+<input type="text" class="project-input" ng-model="newProject" placeholder="Add a new project"/>
+<ul>
+  <li ng-repeat="project in projects">
+    <a ng-href="#/{{ projLink(project.title) }}">{{ project.title }}</a>
+  </li>
+</ul>
+</form> -->

@@ -20,14 +20,14 @@ angular.module('whereWasI.services', [])
 })
 
 .factory('Searches', function() {
-  var resources = [];
+  var searches = [];
 
-  var addResource = function(url) {
-    resources.push(url);
+  var addSearch = function(url) {
+    searches.push({title: url});
   };
 
   return {
-    resources: resources,
-    addResource: addResource
+    searches: searches,
+    addSearch: addSearch
   }
-})
+});
