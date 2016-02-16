@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='whereWasI'>
+<head>
+  <title>Where Was I?</title>
+</head>
+<body>
+  <nav class='navigation'>
+  <ul>
+    <li>
+      <h1>Where Was I?</h1>
+    </li>
+    <li>
+      <a href='#/projects'>Projects</a>
+    </li>
+  </ul>
+  </nav>
+
+  <div ng-view></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+
+
+  <script src="app/projects/projects.js"></script>
+  <script src="app/services/services.js"></script>
+  <script src="app/app.js"></script>
+
+</body>
+</html>
+
+
+
