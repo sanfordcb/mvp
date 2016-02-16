@@ -1,0 +1,4 @@
+<input type="text" ng-model="addProject" placeholder="Add a new project"/>
+<div class="projects" ng-repeat="project in projects">
+  <a ng-href="#/{{ projLink(project) }}">project</a>
+</div>
