@@ -3,7 +3,7 @@
 <input type="text" class="notes-input" ng-model="newNotes" placeholder="Add notes"/>
 <button ng-click="addSearch(newSearch, newNotes)">Add Resource</button>
 <ul>
-  <li ng-repeat="search in searches">{{ search.title }} </br> {{ search.notes }}</li>
+  <li ng-repeat="search in searches">{{ search.title }} </br> {{ search.notes }} </br> {{ project.title }}</li>
 </ul>
 </form>
 

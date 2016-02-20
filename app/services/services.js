@@ -2,9 +2,12 @@ angular.module('whereWasI.services', [])
 
 .factory('Projects', function() {
   var projects = [];
+  var project = {};
 
   var addProject = function(proj) {
-    projects.push({title: proj, created: Date.now()})
+    project = {title: proj, created: Date.now(), resources: []};
+    projects.push(project);
+    console.log(project);
   };
 
   var projLink = function(title) {
@@ -12,22 +15,30 @@ angular.module('whereWasI.services', [])
     return title.slice(0, space);
   };
 
-  return {
-    projects: projects,
-    addProject: addProject,
-    projLink: projLink
-  }
-})
-
-.factory('Searches', function() {
-  var searches = [];
-
-  var addSearch = function(url, notes) {
-    searches.push({title: url, notes: notes});
+  var addSearch = function(projectName, url, notes) {
+    
+    project.resources.push({title: url, notes: notes});
+    console.log(project.resources);
   };
 
   return {
-    searches: searches,
+    projects: projects,
+    project: project,
+    addProject: addProject,
+    projLink: projLink,
     addSearch: addSearch
   }
-});
+})
+
+// .factory('Searches', function() {
+//   var searches = [];
+
+//   var addSearch = function(url, notes) {
+//     searches.push({title: url, notes: notes});
+//   };
+
+//   return {
+//     searches: searches,
+//     addSearch: addSearch
+//   }
+// });

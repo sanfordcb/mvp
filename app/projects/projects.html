@@ -1,8 +1,25 @@
 <form name="addProjects" ng-submit="addProject(newProject)">
 <input type="text" class="project-input" ng-model="newProject" placeholder="Add a new project"/>
+</form>
 <ul>
   <li ng-repeat="project in projects">
-    <a ng-href="#/{{ projLink(project.title) }}">{{ project.title }}</a>
-  </li>
-</ul>
+
+  <form name="addSearches">
+<input type="text" class="url-input" ng-model="newSearch" placeholder="Add a new resource"/>
+<input type="text" class="notes-input" ng-model="newNotes" placeholder="Add notes"/>
+<button ng-click="addSearch(newProject, newSearch, newNotes)">Add Resource</button>
 </form>
+  
+
+</li>
+
+<li ng-repeat="project in projects">{{ project.title }}</br><span>{{ project.resources }}</span></li>
+  <!-- <li ng->{{ search.title }} </br> {{ search.notes }} </br> {{ project.title }}</li> -->
+
+
+
+    <!-- <a ng-href="#/{{ projLink(project.title) }}">{{ project.title }}</a> -->
+
+  
+</ul>
+
